@@ -1,4 +1,4 @@
-module Animal exposing (Animal(..), ride)
+module Animal exposing (Animal(..), ride, eat)
 
 
 type Animal
@@ -28,3 +28,14 @@ ride a =
 
         Fish False ->
             "You can't ride a freshwater fish."
+
+eat : Animal -> String
+eat a =
+    case a of
+        Cow n ->
+            "Cow " ++ n ++ "moos & eats"
+        Snake _ _ ->
+            "The snake hisses and eats"
+        Fish _ ->
+            "The fish eats and swims"
+
