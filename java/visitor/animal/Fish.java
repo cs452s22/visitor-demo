@@ -7,7 +7,7 @@ public class Fish extends Animal {
         saltwater_ = saltwater;
     }
 
-    public String accept(Visitor v) {
+    public <T> T accept(Visitor<T> v) {
         return v.visitFish(this);
     }
 }

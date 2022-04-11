@@ -9,7 +9,7 @@ public class Snake extends Animal {
         slitheriness_ = slitheriness;
     }
 
-    public String accept(Visitor v) {
+    public <T> T accept(Visitor<T> v) {
         return v.visitSnake(this);
     }
 }

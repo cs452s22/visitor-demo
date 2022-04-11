@@ -1,11 +1,13 @@
 package animal;
 
 public abstract class Animal {
-    interface Visitor {
-        String visitCow(Cow c);
-        String visitSnake(Snake s);
-        String visitFish(Fish f);
+
+    // Do this as String without generics first.
+    interface Visitor<T> {
+        T visitCow(Cow c);
+        T visitSnake(Snake s);
+        T visitFish(Fish f);
     }
 
-     abstract public String accept(Visitor v);
+     public abstract <T> T accept(Visitor<T> v);
 }

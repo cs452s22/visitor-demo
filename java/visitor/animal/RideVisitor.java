@@ -1,6 +1,6 @@
 package animal;
 
-public class RideVisitor implements Animal.Visitor {
+public class RideVisitor implements Animal.Visitor<String> {
     public String visitSnake(Snake s) {
         return "Slithering";
     }

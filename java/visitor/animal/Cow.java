@@ -7,7 +7,7 @@ public class Cow extends Animal {
         name_ = name;
     }
 
-    public String accept(Visitor v) {
+    public <T> T accept(Visitor<T> v) {
         return v.visitCow(this);
     }
 }
